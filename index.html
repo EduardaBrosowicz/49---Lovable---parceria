@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>49 Educacao x Lovable</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#0d0d0d;overflow-x:hidden}
+:root{--o:#ff4f11;--ol:#fff2ec;--om:#ffcab3;--b:#0d0d0d;--g:#6b6b6b;--gl:#f5f5f5;--w:#fff;--br:#e8e8e8}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--br)}
+.nb{display:flex;align-items:center;gap:14px}
+.nb .brand{font-family:'DM Serif Display',serif;font-size:18px}
+.nb .sep{color:var(--g)}
+.nb .lov{background:var(--b);color:var(--w);padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600}
+.ncta{background:var(--o);color:var(--w);border:none;cursor:pointer;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 24px 80px;text-align:center}
+.badge{display:inline-block;background:var(--ol);border:1px solid var(--om);color:var(--o);padding:5px 16px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(42px,7vw,86px);line-height:1.05;margin-bottom:24px}
+h1 em{font-style:italic;color:var(--o)}
+.hsub{font-size:clamp(16px,2vw,19px);color:var(--g);max-width:520px;line-height:1.65;margin-bottom:44px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.bp{background:var(--o);color:var(--w);border:none;cursor:pointer;padding:15px 34px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;box-shadow:0 4px 20px rgba(255,79,17,.28)}
+.bs{background:transparent;color:var(--b);border:1.5px solid var(--br);cursor:pointer;padding:15px 34px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:16px}
+
+.stats{display:flex;flex-wrap:wrap;border-top:1px solid var(--br);border-bottom:1px solid var(--br);background:var(--gl)}
+.si{flex:1;min-width:180px;padding:36px 24px;text-align:center;border-right:1px solid var(--br)}
+.si:last-child{border-right:none}
+.sn{font-family:'DM Serif Display',serif;font-size:44px;color:var(--o);line-height:1;margin-bottom:4px}
+.sl{font-size:12px;color:var(--g);text-transform:uppercase;letter-spacing:.04em}
+
+.sec{padding:90px 48px;max-width:1100px;margin:0 auto}
+.tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--o);margin-bottom:14px;display:block}
+.stitle{font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,50px);line-height:1.1;margin-bottom:18px;max-width:600px}
+.ssub{font-size:16px;color:var(--g);line-height:1.7;max-width:500px;margin-bottom:48px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{border:1px solid var(--br);border-radius:14px;padding:32px 28px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--o);opacity:0;transition:opacity .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+.card:hover:before{opacity:1}
+.ci{width:44px;height:44px;border-radius:10px;background:var(--ol);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.card h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:8px}
+.card p{font-size:14px;color:var(--g);line-height:1.6}
+
+.how{background:var(--b);color:var(--w);padding:90px 48px}
+.howi{max-width:1100px;margin:0 auto}
+.how .tag{color:var(--om)}
+.how .stitle{color:var(--w)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;margin-top:48px}
+.step{display:flex;flex-direction:column;gap:12px}
+.snum{font-family:'DM Serif Display',serif;font-size:56px;color:var(--o);opacity:.6;line-height:1}
+.step h4{font-family:'DM Serif Display',serif;font-size:20px;color:var(--w)}
+.step p{font-size:13px;color:#aaa;line-height:1.6}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:90px 48px;max-width:1100px;margin:0 auto}
+.av{background:var(--ol);border-radius:20px;padding:56px 40px;text-align:center;border:1px solid var(--om)}
+.av .bn{font-family:'DM Serif Display',serif;font-size:88px;color:var(--o);line-height:1}
+.av p{font-size:15px;color:var(--g);margin-top:6px}
+
+.fcta{text-align:center;padding:100px 24px;border-top:1px solid var(--br)}
+.fcta h2{font-family:'DM Serif Display',serif;font-size:clamp(34px,5vw,60px);margin-bottom:16px;line-height:1.1}
+.fcta h2 em{font-style:italic;color:var(--o)}
+.fcta p{font-size:16px;color:var(--g);margin-bottom:36px}
+
+footer{border-top:1px solid var(--br);padding:28px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer span{font-size:13px;color:var(--g)}
+
+/* MODAL - usando visibility+opacity para evitar problemas */
+#moverlay{
+  visibility:hidden;
+  opacity:0;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  transition:opacity .25s,visibility .25s;
+}
+#moverlay.show{
+  visibility:visible;
+  opacity:1;
+}
+#mbox{background:#fff;border-radius:20px;padding:48px 44px;max-width:480px;width:100%;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.2)}
+#mclose{position:absolute;top:14px;right:14px;background:var(--gl);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;font-size:16px;line-height:34px;text-align:center;color:var(--g)}
+.mtag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--o);margin-bottom:8px}
+#mbox h2{font-family:'DM Serif Display',serif;font-size:28px;margin-bottom:8px;line-height:1.15}
+.msub{font-size:14px;color:var(--g);margin-bottom:24px;line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.fg label{font-size:12px;font-weight:600;color:var(--b)}
+.fg input{padding:11px 13px;border:1.5px solid var(--br);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--b);outline:none}
+.fg input:focus{border-color:var(--o)}
+.fg input::placeholder{color:#bbb}
+#fsub{width:100%;background:var(--o);color:var(--w);border:none;cursor:pointer;padding:14px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;margin-top:6px;box-shadow:0 4px 18px rgba(255,79,17,.28)}
+#fsub:disabled{opacity:.6;cursor:not-allowed}
+.fdisc{font-size:11px;color:var(--g);text-align:center;margin-top:12px;line-height:1.5}
+#succ{display:none;text-align:center;padding:16px 0}
+.sico{width:60px;height:60px;background:#edfff3;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;border:2px solid #b6f0cb}
+#succ h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:8px}
+#succ p{font-size:14px;color:var(--g);line-height:1.6}
+
+@media(max-width:768px){
+  nav{padding:14px 18px}
+  .sec{padding:56px 18px}
+  .how{padding:56px 18px}
+  .about{grid-template-columns:1fr;gap:40px;padding:56px 18px}
+  #mbox{padding:32px 22px}
+  .frow{grid-template-columns:1fr}
+  footer{padding:20px 18px;flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nb">
+    <span class="brand">49 Educacao</span>
+    <span class="sep">x</span>
+    <span class="lov">Lovable</span>
+  </div>
+  <button class="ncta" onclick="openM()">Resgatar $10k &rarr;</button>
+</nav>
+
+<section class="hero">
+  <div class="badge">&#9733; Parceria Exclusiva 2025</div>
+  <h1>Construa mais rapido.<br><em>Escale de verdade.</em></h1>
+  <p class="hsub">A maior aceleradora de startups do Brasil se une ao Lovable para dar <strong>$10.000 em creditos</strong> para voce construir seu produto sem limites.</p>
+  <div class="hbtns">
+    <button class="bp" onclick="openM()">Resgatar $10k em creditos</button>
+    <button class="bs" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saber mais &darr;</button>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="si"><div class="sn">4.000+</div><div class="sl">Startups Aceleradas</div></div>
+  <div class="si"><div class="sn">250+</div><div class="sl">Startups Investidas</div></div>
+  <div class="si"><div class="sn">$10k</div><div class="sl">Creditos Lovable</div></div>
+  <div class="si"><div class="sn">#1</div><div class="sl">Aceleradora do Brasil</div></div>
+</div>
+
+<section id="sobre" class="sec">
+  <span class="tag">O que voce recebe</span>
+  <div class="stitle">Tudo que sua startup precisa para decolar</div>
+  <p class="ssub">A parceria 49 Educacao x Lovable e a rampa de lancamento que voce esperava.</p>
+  <div class="cards">
+    <div class="card"><div class="ci">&#9889;</div><h3>$10k em Creditos</h3><p>Construa, itere e lance sem se preocupar com custo de desenvolvimento.</p></div>
+    <div class="card"><div class="ci">&#128640;</div><h3>Rede da 49</h3><p>Acesso a maior rede de founders, investidores e mentores do Brasil.</p></div>
+    <div class="card"><div class="ci">&#129302;</div><h3>Build com IA</h3><p>O Lovable transforma ideias em produto real com inteligencia artificial.</p></div>
+  </div>
+</section>
+
+<div class="how">
+  <div class="howi">
+    <span class="tag">Como funciona</span>
+    <div class="stitle" style="color:#fff">Simples, rapido, sem burocracia</div>
+    <div class="steps">
+      <div class="step"><div class="snum">01</div><h4>Preencha o formulario</h4><p>Informe seus dados para validarmos sua elegibilidade.</p></div>
+      <div class="step"><div class="snum">02</div><h4>Ative os creditos</h4><p>Voce e redirecionado para ativar seus $10k no Lovable.</p></div>
+      <div class="step"><div class="snum">03</div><h4>Construa seu produto</h4><p>Crie e lance seu MVP com velocidade e qualidade.</p></div>
+      <div class="step"><div class="snum">04</div><h4>Escale na 49</h4><p>Conecte-se a investidores e oportunidades reais.</p></div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--gl)">
+  <div class="about">
+    <div>
+      <span class="tag">Sobre a 49 Educacao</span>
+      <div class="stitle">A maior aceleradora do Brasil</div>
+      <p style="font-size:15px;color:var(--g);line-height:1.75;margin-bottom:20px">Com mais de 4.000 startups aceleradas e 250+ investidas, somos a principal porta de entrada para o ecossistema de inovacao do pais.</p>
+      <p style="font-size:15px;color:var(--g);line-height:1.75">Nossa parceria com o Lovable une nossa rede e expertise com a tecnologia mais avancada de desenvolvimento de produtos com IA.</p>
+    </div>
+    <div class="av"><div class="bn">4k+</div><p>Startups aceleradas<br>e transformadas</p></div>
+  </div>
+</div>
+
+<div class="fcta">
+  <h2>Pronto para construir<br>algo <em>incrivel?</em></h2>
+  <p>Junte-se a centenas de founders aproveitando a parceria.</p>
+  <button class="bp" onclick="openM()">Resgatar $10k agora &rarr;</button>
+</div>
+
+<footer>
+  <span>&copy; 2025 49 Educacao x Lovable</span>
+  <span>contato@49educacao.com.br</span>
+</footer>
+
+<div id="moverlay" onclick="bgClose(event)">
+  <div id="mbox">
+    <button id="mclose" onclick="closeM()">&#x2715;</button>
+    <div id="mform">
+      <div class="mtag">Parceria 49 x Lovable</div>
+      <h2>Resgatar $10k<br>em creditos</h2>
+      <p class="msub">Preencha seus dados e sera direcionado para ativar seus creditos no Lovable.</p>
+      <div class="frow">
+        <div class="fg"><label>Nome *</label><input id="fn" type="text" placeholder="Joao"></div>
+        <div class="fg"><label>Sobrenome *</label><input id="ln" type="text" placeholder="Silva"></div>
+      </div>
+      <div class="fg"><label>Empresa / Startup *</label><input id="co" type="text" placeholder="Nome da empresa"></div>
+      <div class="fg"><label>E-mail corporativo *</label><input id="em" type="email" placeholder="joao@empresa.com"></div>
+      <button id="fsub" onclick="sendForm()">Quero meus $10k em creditos &rarr;</button>
+      <p class="fdisc">Seus dados sao usados somente para contato desta parceria.</p>
+    </div>
+    <div id="succ">
+      <div class="sico">&#10003;</div>
+      <h3>Perfeito!</h3>
+      <p>Dados salvos! Voce sera redirecionado para ativar seus <strong>$10k em creditos Lovable</strong>.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwJ7alE2za374uosjb8PORdoqCTnCnQzYyVO9r5v-ZpLQ6NR8cES2J4ZLarLFg9PXFP/exec';
+var LOVABLE   = 'https://lovable-for-startups.lovable.app/partner/49-educao';
+
+function openM(){
+  document.getElementById('moverlay').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeM(){
+  document.getElementById('moverlay').classList.remove('show');
+  document.body.style.overflow='';
+  setTimeout(function(){
+    document.getElementById('mform').style.display='block';
+    document.getElementById('succ').style.display='none';
+    document.getElementById('fsub').disabled=false;
+    document.getElementById('fsub').innerHTML='Quero meus $10k em creditos &rarr;';
+    document.getElementById('fn').value='';
+    document.getElementById('ln').value='';
+    document.getElementById('co').value='';
+    document.getElementById('em').value='';
+  },300);
+}
+function bgClose(e){ if(e.target===document.getElementById('moverlay')) closeM(); }
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
+
+function sendForm(){
+  var fn=document.getElementById('fn').value.trim();
+  var ln=document.getElementById('ln').value.trim();
+  var co=document.getElementById('co').value.trim();
+  var em=document.getElementById('em').value.trim();
+  if(!fn||!ln||!co||!em){ alert('Preencha todos os campos.'); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ alert('E-mail invalido.'); return; }
+  var btn=document.getElementById('fsub');
+  btn.disabled=true;
+  btn.textContent='Enviando...';
+  var img=new Image();
+  img.src=SCRIPT_URL+'?firstName='+encodeURIComponent(fn)+'&lastName='+encodeURIComponent(ln)+'&company='+encodeURIComponent(co)+'&email='+encodeURIComponent(em);
+  setTimeout(function(){
+    document.getElementById('mform').style.display='none';
+    document.getElementById('succ').style.display='block';
+    setTimeout(function(){ window.open(LOVABLE,'_blank'); },1500);
+  },800);
+}
+</script>
+</body>
+</html>
